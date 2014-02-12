@@ -5,6 +5,8 @@ A simple maven archetype that will generate an ops4j pax definition.xml suitable
 
 Usage
 =====
+This project is hosted in the Maven Central repository.
+
 1. Generate your archetype:
 
         mvn archetype:generate -DarchetypeGroupId=com.rapid7.pax \
