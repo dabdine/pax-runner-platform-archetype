@@ -48,7 +48,7 @@ Usage
                 <configuration>
                    <runner>1.8.5</runner>
                    <provision>
-                      <param>--definitionURL=mvn:com.rapid7.pax/pax-platform-felix-4.2/0.0.1-SNAPSHOT/xml</param>
+                      <param>--definitionURL=mvn:com.myplatform/pax-platform-felix-4.2.0/1.0-SNAPSHOT/xml</param>
                    </provision>
                 </configuration>
              </plugin>
