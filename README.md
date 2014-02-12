@@ -5,9 +5,8 @@ A simple maven archetype that will generate an ops4j pax definition.xml suitable
 
 Usage
 =====
-1. Generate your archetype:
-mvn archetype:generate -DarchetypeGroupId=com.rapid7.pax -DarchetypeArtifactId=pax-runner-platform-archetype -DarchetypeVersion=1.0-SNAPSHOT -DgroupId=org.myplatform -DartifactId=pax-platform-felix-4.2.0
-2. Modify the definition.xml file in the generated directory. Here's an example for felix 4.2.0:
+1. Generate your archetype: `mvn archetype:generate -DarchetypeGroupId=com.rapid7.pax -DarchetypeArtifactId=pax-runner-platform-archetype -DarchetypeVersion=1.0-SNAPSHOT -DgroupId=org.myplatform -DartifactId=pax-platform-felix-4.2.0`
+2. Modify the `definition.xml` file in the generated directory. Here's an example for felix 4.2.0:
 
         <platform>
             <name>Felix 4.2.0</name>
@@ -31,8 +30,8 @@ mvn archetype:generate -DarchetypeGroupId=com.rapid7.pax -DarchetypeArtifactId=p
                 </bundle>
             </profile>
         </platform>
-3. mvn clean install
-4. run pax runner with --definitionURL=mvn:org.myplatform/pax-platform-felix-4.2.0/1.0-SNAPSHOT/xml. Here's an example if you're using the maven-pax-plugin:
+3. `mvn clean install`
+4. run pax runner with `--definitionURL=mvn:org.myplatform/pax-platform-felix-4.2.0/1.0-SNAPSHOT/xml`. Here's an example if you're using the maven-pax-plugin:
 
         <build>
           <plugins>
