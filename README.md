@@ -58,6 +58,8 @@ This project is hosted in the Maven Central repository.
           </plugins>
         </build>
         
+NOTE: You can also have multiple definition files and use the maven classifier to build them. You would simply copy the definition.xml and slightly modify the maven plugin configuration in the generated pom to include all the definition files with specific classifiers.
+
 License
 =======
 
