@@ -58,7 +58,25 @@ This project is hosted in the Maven Central repository.
           </plugins>
         </build>
         
-NOTE: You can also have multiple definition files and use the maven classifier to build them. You would simply copy the definition.xml and slightly modify the maven plugin configuration in the generated pom to include all the definition files with specific classifiers.
+NOTE: You can also have multiple definition files and use the maven classifier to build them. You would simply copy the definition.xml and slightly modify the maven plugin configuration in the generated pom to include all the definition files with specific classifiers. For example, lets say you want to create a felix 4.2.0 and 4.2.1 configuration. Create both definition.xml files (perhaps named definition-4.2.0.xml and definition-4.2.1.xml), then modify the configuration in your generated pom:
+
+          <configuration>
+             <artifacts>
+                <artifact>
+                   <file>definition-4.2.0.xml</file>
+                   <classifier>felix-4.2.1</classifier>
+                   <type>xml</type>
+                </artifact>
+                <artifact>
+                   <file>definition-4.2.1.xml</file>
+                   <classifier>felix-4.2.1</classifier>
+                   <type>xml</type>
+                </artifact>
+             </artifacts>
+          </configuration>
+
+Then, you would use the same maven protocol handler in your definitionURL, this time including the classifier: `--definitionURL=mvn:org.myplatform/pax-platform-felix-4.2.0/1.0-SNAPSHOT/felix-4.2.0/xml`
+
 
 License
 =======
